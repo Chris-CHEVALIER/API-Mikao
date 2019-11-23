@@ -29,6 +29,9 @@ class Treatment(models.Model):
     def __unicode__(self):
         return self.name
 
+    def getDescription(self):
+        return self.description
+
 class Symptom(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
