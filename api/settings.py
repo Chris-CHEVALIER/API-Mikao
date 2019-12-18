@@ -25,11 +25,8 @@ SECRET_KEY = 'ff5)qs%1jqywd95x-an&8k0(1ws+wj&3xl3+84z$j$o-h15a7n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
+ALLOWED_HOSTS = ['*']
 # Application definition
-
 INSTALLED_APPS = [
     'api.mikao',
     'django.contrib.admin',
@@ -55,6 +52,13 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
+CORS_ORIGIN_REGEX_WHITELIST = [
+    'http://localhost:3000',
+]
 ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
