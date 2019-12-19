@@ -35,7 +35,7 @@ class Treatment(models.Model):
 class Symptom(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    treatments = models.ManyToManyField(Treatment, verbose_name="list of treatments")
+    treatments = models.ManyToManyField(Treatment)
     
     #university = models.ForeignKey(University, on_delete=models.DO_NOTHING)
  
